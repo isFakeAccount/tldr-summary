@@ -1,0 +1,7 @@
+{
+    "prettier.printWidth": 160,
+    "prettier.tabWidth": 4,
+    "license.author": "Yoshikage Kira",
+    "license.year": "auto",
+    "license.extension": ".md"
+}
