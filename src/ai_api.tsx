@@ -30,7 +30,7 @@ export function processSubmissionData(submissionData: string): Part[] {
 export async function getCommentSummary(apiKey: string, commentBody: string, parentComment?: string, submissionData?: string | null): Promise<string> {
     const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${apiKey}`;
 
-    const parts: Part[] = [{ text: `Please summarize the following comment:\n${commentBody}` }];
+    const parts: Part[] = [{ text: `Please summarize the following comment. Aim for 500 characters or less:\n${commentBody}` }];
 
     if (parentComment) {
         parts.push({ text: `This comment is a reply to:\n${parentComment}` });

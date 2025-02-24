@@ -5,7 +5,7 @@ Devvit.configure({ redditAPI: true, http: true });
 
 Devvit.addSettings([
     {
-        name: "Gemini-API-Key",
+        name: "Gemini-API",
         label: "Gemini API Key",
         type: "string",
         scope: "installation",
@@ -38,7 +38,7 @@ Devvit.addMenuItem({
     label: "TL;DR Summary",
     location: ["comment"],
     onPress: async (event, ctx) => {
-        const apiKey = (await ctx.settings.get("Gemini-API-Key")) as string;
+        const apiKey = (await ctx.settings.get("Gemini-API")) as string;
         const preprocessedData = await preprocessData(ctx, event.targetId);
 
         if (preprocessedData === null || preprocessedData === undefined) {
